@@ -251,9 +251,15 @@ img {
 }
 
 .nav__logo {
+  margin-left: -40px;
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
   transition: color 0.4s;
+}
+.logo {
+  margin-left: -150px;
+  height: 80px;
+  width: 100px;
 }
 
 .nav__actions {
@@ -285,15 +291,17 @@ img {
     background-color: var(--body-color);
     box-shadow: 0 8px 16px hsla(230, 75%, 32%, 0.15);
     width: 100%;
-    padding-block: 4.5rem 4rem;
+
+    padding-block: 4.5rem 3rem;
     transition: top 0.4s;
   }
 }
 
 .nav__list {
   display: flex;
-  flex-direction: column;
-  row-gap: 2.5rem;
+  margin-right: -35px;
+  flex-direction: row;
+  row-gap: 2rem;
   text-align: center;
 }
 
@@ -392,6 +400,96 @@ img {
   font-weight: var(--font-medium);
   margin-bottom: 0.25rem;
 }
+/* About Us, Services, and Contact Us Sections */
+.content {
+  padding: 40px 20px;
+  background-color: #f4f8fb;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content h2 {
+  font-size: 1.8em;
+  color: #007bff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.content ul, .content ol {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.content li {
+  margin-bottom: 10px;
+}
+
+.content strong {
+  color: #007bff;
+}
+
+.content a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+.content form {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.content label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.content input[type="text"],
+.content input[type="email"],
+.content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.content button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.content button:hover {
+  background-color: #007bff;
+}
+
 
 .login__input,
 .signup__input {
