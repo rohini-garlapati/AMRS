@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css" />
+    <link rel="stylesheet" href="logout.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <img src="./assets/img/amrslogo.png" alt="" class="logo" />
+        <a href="home.html" class="nav__logo">AMRS</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="home.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="dashboard.html" class="nav__link">Summarizer</a>
+            </li>
+            <li class="nav__item">
+              <a href="past-summaries.html" class="nav__link"
+                >View Past Summaries</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="profile.html" class="nav__link active">Profile</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link" id="logoutLink">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="heading">Profile</h1>
+      <div class="profile-container">
+        <div class="profile-card">
+          <img
+            src="assets/img/appolo.png"
+            alt="Profile Picture"
+            class="profile-picture"
+          />
+          <h2 class="profile-name">Appolo</h2>
+          <p class="profile-org">HealthCare</p>
+          <button class="edit-button">Edit Profile</button>
+        </div>
+        <div class="profile-details">
+          <h3 style="padding-bottom: 20px; color: rgb(18, 137, 211)">
+            Profile Information
+          </h3>
+          <div class="profile-info">
+            <h3><strong>Username: </strong>Appolo_Hyd</h3>
+            <h3><strong>Email: </strong> appolo@gmail.com</h3>
+            <h3><strong>Phone:</strong> +918345629751</h3>
+            <h3>
+              <strong>Address:</strong>Yodha Main Street(500047), Hyderabad,
+              Telangana
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div id="logoutPopup" class="popup">
+        <div class="popup-content">
+          <h3>Log Out</h3>
+          <p>Are you sure you want to log out?</p>
+          <div class="popup-buttons">
+            <button id="logoutYes" class="btn btn-primary">Yes</button>
+            <button id="logoutCancel" class="btn btn-secondary">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="profile.js"></script>
+    <script src="logout.js"></script>
+  </body>
+</html>

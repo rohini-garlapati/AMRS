@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>AMRS</title>
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <img src="./assets/img/amrslogo.png" alt="" class="logo" />
+        <a href="#" class="nav__logo">AMRS</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link" onclick="showSection('home')"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link" onclick="showSection('about')"
+                >About Us</a
+              >
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link" onclick="showSection('services')"
+                >Services</a
+              >
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link" onclick="showSection('contact')"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Close button -->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <div class="nav__actions">
+          <!-- Search button -->
+          <i class="ri-search-line nav__search" id="search-btn"></i>
+
+          <!-- Login button -->
+          <i class="ri-user-line nav__login" id="login-btn"></i>
+
+          <!-- Toggle button -->
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== SEARCH ====================-->
+    <div class="search" id="search">
+      <form action="" class="search__form">
+        <i class="ri-search-line search__icon"></i>
+        <input
+          type="search"
+          placeholder="What are you looking for?"
+          class="search__input"
+        />
+      </form>
+
+      <i class="ri-close-line search__close" id="search-close"></i>
+    </div>
+
+    <!--==================== LOGIN/Signup ====================-->
+    <div class="login" id="login">
+      <form action="/login" method="post" class="login__form" id="loginform">
+        <h2 class="login__title">Log In</h2>
+
+        <div class="login__group">
+          <div>
+            <label for="email" class="login__label">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              id="lemail"
+              name="lemail"
+              class="login__input"
+            />
+          </div>
+
+          <div>
+            <label for="password" class="login__label">Password</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              id="lpassword"
+              name="lpassword"
+              class="login__input"
+            />
+          </div>
+        </div>
+
+        <div>
+          <p class="login__signup">
+            Do not have an account? <a href="" id="linkSignup">Sign up</a>
+          </p>
+
+          <a href="#" class="login__forgot">forgot password ?</a>
+
+          <button type="submit" class="login__button">Log In</button>
+        </div>
+      </form>
+
+      <form
+        action="/sign_up"
+        method="post"
+        class="signup__form form--hidden"
+        id="signupform"
+      >
+        <h2 class="signup__title">Create Account</h2>
+
+        <div class="signup__group">
+          <div>
+            <label for="email" class="signup__label">Username</label>
+            <input
+              type="text"
+              placeholder="Username"
+              id="username"
+              name="username"
+              class="signup__input"
+              required
+            />
+          </div>
+          <div>
+            <label for="email" class="signup__label">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              name="email"
+              id="email"
+              class="signup__input"
+              required
+            />
+          </div>
+          <!-- <div>
+            <label for="phno" class="signup__label">Phone Number</label>
+            <input
+              type="number"
+              placeholder="Enter your Phone Number"
+              id="phno"
+              class="signup__input"
+            />
+          </div> -->
+
+          <div>
+            <label for="password" class="signup__label">Password</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              id="password"
+              name="password"
+              class="signup__input"
+              required
+            />
+          </div>
+          <div>
+            <label for="password" class="signup__label">Confirm Password</label>
+            <input
+              type="password"
+              placeholder="Re-enter your password"
+              id="cpassword"
+              name="cpassword"
+              class="signup__input"
+              required
+            />
+          </div>
+        </div>
+
+        <div>
+          <p class="signup__login">
+            Already have an account? <a href="./" id="linkLogin">Login</a>
+          </p>
+
+          <button type="submit" class="signup__button">Sign Up</button>
+        </div>
+      </form>
+
+      <i class="ri-close-line login__close" id="login-close"></i>
+    </div>
+
+    <!--==================== MAIN CONTENT ====================-->
+    <div id="home" class="content active">
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+
+          <div class="slide first">
+            <img src="assets/img/home_slide1.jpg" alt="" t />
+
+            <h2
+              style="
+                position: absolute;
+                top: 200px;
+                color: black;
+                margin-left: 20px;
+              "
+            >
+              Simplify Chronic Disease Management
+            </h2>
+            <h4
+              style="
+                position: absolute;
+                top: 250px;
+                color: rgb(96, 92, 100);
+                margin-left: 20px;
+              "
+            >
+              Automate the summarization of medical reports and focus <br />on
+              what truly matters - patient care
+            </h4>
+            <div class="slide-text">
+              <h2 style="text-align: center">
+                AUTOMATED MEDICAL <br />REPORT SUMMARIZER
+              </h2>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="assets/img/home_slide2.jpg" alt="" />
+            <h2
+              style="
+                position: absolute;
+                top: 200px;
+                color: black;
+                margin-left: 20px;
+              "
+            >
+              Reduce Healthcare Provider Workload
+            </h2>
+            <h4
+              style="
+                position: absolute;
+                top: 250px;
+                color: rgb(96, 92, 100);
+                margin-left: 20px;
+              "
+            >
+              Automate routine tasks and minimize administrative burdens <br />
+              to allow healthcare providers to focus on patient care
+            </h4>
+          </div>
+          <div class="slide">
+            <img src="assets/img/home_slide3.jpg" alt="" />
+            <h2
+              style="
+                position: absolute;
+                top: 450px;
+                color: black;
+                margin-left: 20px;
+              "
+            >
+              Next-Generation Healthcare
+            </h2>
+            <h4
+              style="
+                position: absolute;
+                top: 500px;
+                color: rgb(96, 92, 100);
+                margin-left: 20px;
+              "
+            >
+              Adopt cutting-edge technology to stay ahead in the
+              <br />ever-evolving healthcare landscape
+            </h4>
+          </div>
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+        </div>
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+        </div>
+      </div>
+    </div>
+    <div id="about" class="content" style="display: none">
+      <h1>About Us</h1>
+      <p>
+        Welcome to AMRS! Our mission is to revolutionize the management of
+        chronic diseases through advanced automation technologies. By leveraging
+        state-of-the-art tools and methodologies, we aim to provide healthcare
+        professionals with efficient and accurate medical report summarization,
+        allowing them to focus on what truly matters - patient care.
+      </p>
+      <p>
+        Our platform is designed to minimize administrative burdens, reduce
+        healthcare provider workload, and enhance patient outcomes through
+        seamless integration and user-friendly interfaces. We believe that by
+        automating routine tasks, healthcare professionals can spend more time
+        on patient interactions and less time on paperwork.
+      </p>
+      <p>
+        Our team is composed of experienced professionals from the healthcare
+        and technology sectors, working together to bring innovative solutions
+        to the market. We are dedicated to continuous improvement and are always
+        exploring new ways to enhance our platform's capabilities. Our experts
+        include doctors, software engineers, data scientists, and user
+        experience designers, all collaborating to create a product that meets
+        the highest standards of quality and reliability.
+      </p>
+      <p>
+        At AMRS, we are committed to making a positive impact on the healthcare
+        industry. We understand the challenges faced by healthcare providers and
+        are passionate about creating solutions that improve efficiency and
+        patient care. Join us in transforming the healthcare industry and making
+        a significant impact on the lives of patients and healthcare providers
+        worldwide.
+      </p>
+      <h2>Our Vision</h2>
+      <p>
+        Our vision is to be the leading provider of automated medical report
+        summarization solutions, setting the standard for innovation and
+        excellence in the healthcare industry. We strive to empower healthcare
+        providers with the tools they need to deliver the best possible care to
+        their patients.
+      </p>
+
+      <h3>Features</h3>
+      <ul>
+        <li>Accurate and concise summaries of medical reports</li>
+        <li>Support for PDFs and images (JPG, JPEG, PNG)</li>
+        <li>Utilizes state-of-the-art NLP techniques</li>
+        <li>Easy-to-use interface</li>
+        <li>Secure and private processing</li>
+      </ul>
+    </div>
+
+    <div id="services" class="content" style="display: none">
+      <h1>Services</h1>
+      <p>
+        At AMRS, we offer a range of services designed to enhance the efficiency
+        and accuracy of medical report management:
+      </p>
+      <ul>
+        <li>
+          <strong>Automated Medical Report Summarization:</strong> Our advanced
+          algorithms extract key information from medical reports, providing
+          concise and accurate summaries.
+        </li>
+        <li>
+          <strong>Data Integration:</strong> Seamlessly integrate our platform
+          with your existing healthcare systems to streamline workflows and
+          improve data accessibility.
+        </li>
+        <li>
+          <strong>Customizable Solutions:</strong> Tailor our services to meet
+          the specific needs of your healthcare facility, ensuring optimal
+          performance and user satisfaction.
+        </li>
+        <li>
+          <strong>Training and Support:</strong> Comprehensive training and
+          ongoing support to ensure your team can effectively utilize our tools
+          and maximize their benefits.
+        </li>
+        <li>
+          <strong>Compliance and Security:</strong> Our platform adheres to the
+          highest standards of data security and regulatory compliance, ensuring
+          patient data is protected at all times.
+        </li>
+      </ul>
+      <h2>Our Process</h2>
+      <p>
+        Our services are designed to be user-friendly and easy to implement.
+        Here’s how our process works:
+      </p>
+      <ol>
+        <li>
+          <strong>Consultation:</strong> We begin with a thorough consultation
+          to understand your needs and requirements.
+        </li>
+        <li>
+          <strong>Implementation:</strong> Our team will integrate our solutions
+          into your existing systems, ensuring a smooth transition.
+        </li>
+        <li>
+          <strong>Training:</strong> We provide comprehensive training to your
+          staff, ensuring they are comfortable and proficient with our tools.
+        </li>
+        <li>
+          <strong>Support:</strong> Our dedicated support team is available to
+          assist you with any issues or questions you may have.
+        </li>
+        <li>
+          <strong>Continuous Improvement:</strong> We regularly update our
+          platform with new features and improvements based on user feedback and
+          industry trends.
+        </li>
+      </ol>
+      <h2>Why Choose AMRS?</h2>
+      <p>Here are a few reasons why healthcare providers choose AMRS:</p>
+      <ul>
+        <li>
+          <strong>Expertise:</strong> Our team combines healthcare and
+          technology expertise to deliver solutions that truly meet your needs.
+        </li>
+        <li>
+          <strong>Innovation:</strong> We stay ahead of the curve by
+          continuously developing and integrating new technologies.
+        </li>
+        <li>
+          <strong>Customer Service:</strong> We are committed to providing
+          exceptional customer service and support.
+        </li>
+        <li>
+          <strong>Proven Results:</strong> Our solutions have been proven to
+          reduce administrative burdens and improve patient outcomes.
+        </li>
+      </ul>
+    </div>
+    <div id="contact" class="content" style="display: none">
+      <h1>Contact Us</h1>
+      <p>
+        We would love to hear from you! Whether you have a question about our
+        services, need assistance, or want to provide feedback, our team is here
+        to help.
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:support@amrs.com">support@amrs.com</a><br />
+        <strong>Phone:</strong> +1 (800) 123-4567
+      </p>
+      <p>
+        <strong>Office Address:</strong><br />
+        AMRS Headquarters<br />
+        XYZ <br />
+        HYD, 500072<br />
+        TELANGANA,INDIA.
+      </p>
+      <h2>Business Hours</h2>
+      <p>
+        <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM<br />
+        <strong>Saturday:</strong> 10:00 AM - 4:00 PM<br />
+        <strong>Sunday:</strong> Closed
+      </p>
+      <h2>Get in Touch</h2>
+      <p>You can also reach us through our social media channels:</p>
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/amrs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com/amrs" target="_blank">Twitter</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/amrs" target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+      <h2>Contact Form</h2>
+      <p>
+        Alternatively, you can use the form below to send us a message directly:
+      </p>
+      <form action="/submit_contact" method="post">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br />
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="4" required></textarea
+        ><br />
+        <button type="submit">Submit</button>
+      </form>
+      <p>We look forward to connecting with you!</p>
+    </div>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script>
+      function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('.content')
+        sections.forEach((section) => {
+          section.style.display = 'none'
+        })
+
+        // Show the selected section
+        const selectedSection = document.getElementById(sectionId)
+        if (selectedSection) {
+          selectedSection.style.display = 'block'
+        }
+      }
+    </script>
+    <!-- <script>
+      document
+        .getElementById('signupform')
+        .addEventListener('submit', async function (event) {
+          event.preventDefault() // Prevent the default form submission
+
+          const username = document.getElementById('username').value
+          const email = document.getElementById('email').value
+          const password = document.getElementById('password').value
+          const cpassword = document.getElementById('cpassword').value
+
+          if (password !== cpassword) {
+            alert('Passwords do not match')
+            return
+          }
+
+          try {
+            const response = await fetch('/sign_up', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ username, email, password, cpassword }),
+            })
+
+            const result = await response.json()
+
+            if (response.status === 201) {
+              alert('Registered successfully!')
+              window.location.href = 'dashboard.html' // Redirect to dashboard on success
+            } else {
+              alert(result.message) // Display the error message from the server
+            }
+          } catch (error) {
+            console.error('Error:', error)
+            alert('An error occurred. Please try again.')
+          }
+        })
+    </script> -->
+  </body>
+</html>
